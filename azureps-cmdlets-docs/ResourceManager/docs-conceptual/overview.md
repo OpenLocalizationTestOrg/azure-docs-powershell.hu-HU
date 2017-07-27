@@ -9,15 +9,14 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
-ms.date: 05/15/2017
-ms.openlocfilehash: dbcc818ecc06d3206b8ccd6f8743c670c86cead0
-ms.sourcegitcommit: 5f2c794bfa44ec4ffacdd73f548288874210a498
+ms.date: 07/26/2017
+ms.openlocfilehash: 3772b68949dc9dba110e6015c8d2a8b944b26528
+ms.sourcegitcommit: 20bcef86db4e4869125bb63085fcffd009c19280
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 07/27/2017
 ---
-# Az Azure PowerShell áttekintése
-<a id="overview-of-azure-powershell" class="xliff"></a>
+# <a name="overview-of-azure-powershell"></a>Az Azure PowerShell áttekintése
 
 Az Azure PowerShell olyan parancsmagok készletét kínálja, amelyek az [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) modellt használják az Azure-erőforrások kezeléséhez.
 
@@ -34,17 +33,15 @@ A következő példák segítenek megismerkedni az Azure PowerShell általános 
 > [!NOTE] > Ha van olyan üzemelő példánya, amely a klasszikus telepítési modellt használja, és nem alakítható át, akkor az Azure PowerShell Service Management verzióját telepítheti. További információ: [Az Azure PowerShell Service Management moduljának telepítése](/powershell/azure/servicemanagement/install-azure-ps).
 
 
-### Segítségre van szüksége a PowerShell-lel kapcsolatban?
-<a id="need-help-with-powershell" class="xliff"></a>
+### <a name="need-help-with-powershell"></a>Segítségre van szüksége a PowerShell-lel kapcsolatban?
 
 Ha nem ismeri a PowerShellt, érdemes lehet elolvasni a PowerShellt bemutató anyagot. A PowerShell használatának első lépéseivel kapcsolatban lásd: [Szkriptek használata a PowerShellben](https://technet.microsoft.com/library/bb978526.aspx).
 
 Megtekintheti a következő videót is: [A PowerShell alapjai: (1. rész) Ismerkedés a PowerShell-lel](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1).
 
-## Egyéb Azure PowerShell-modulok
-<a id="other-azure-powershell-modules" class="xliff"></a>
+## <a name="other-azure-powershell-modules"></a>Egyéb Azure PowerShell-modulok
 
 * [Azure Active Directory](/powershell/azure/active-directory/)
 * [Azure Information Protection](/powershell/azure/aip/)
-* [Azure Service Fabric](/powershell/azure/oservice-fabric/)
+* [Azure Service Fabric](/powershell/azure/service-fabric/)
 * [Azure ElasticDB](/powershell/azure/elasticdbjobs/)
