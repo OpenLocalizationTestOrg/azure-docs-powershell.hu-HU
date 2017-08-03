@@ -10,18 +10,257 @@ ms.product: azure
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: 
-ms.date: 05/18/2017
-ms.openlocfilehash: 97a23180a1fc65d96fdc9dbdffcbe3501a4c4c2a
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.date: 07/26/2017
+ms.openlocfilehash: cc2fe75f498f9043e5a4b632c144877af0143173
+ms.sourcegitcommit: 20bcef86db4e4869125bb63085fcffd009c19280
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="release-notes"></a>Kibocsátási megjegyzések
 
 Az alábbiakban az Azure PowerShell jelen kiadásában végrehajtott módosítások listája olvasható.
 
-## <a name="version-400"></a>4.0.0-s verzió
+## <a name="20170717---version-421"></a>2017.07.17. – 4.2.1-es verzió
+* Számítás
+    - Kijavítottuk a virtuálisgép-lemez és virtuálisgép-lemez pillanatfelvételének létrehozásához és frissítéséhez használt parancsmagok hibáit (hivatkozás)[https://github.com/azure/azure-powershell/issues/4309]
+      - New-AzureRmDisk
+      - New-AzureRmSnapshot
+      - Update-AzureRmDisk
+      - Update-AzureRmSnapshot
+* Profil
+    - Kijavítottuk a nem interaktív felhasználói hitelesítéssel kapcsolatos hibát az RDFE-ben (hivatkozás)[https://github.com/Azure/azure-powershell/issues/4299]
+* ServiceManagement
+    - Kijavítottuk a nem interaktív felhasználói hitelesítéssel kapcsolatos hibát (hivatkozás)[https://github.com/Azure/azure-powershell/issues/4299]
+
+## <a name="2017711---version-420"></a>2017.07.11. – 4.2.0-ás verzió
+* AnalysisServices
+    * Új adatsík API hozzáadása
+        - API az AS-kiszolgálónapló lekéréséhez, Export-AzureAnalysisServicesInstanceLog
+* Automatizálás
+    * Időzóna értékének helyes beállítása a New-AzureRmAutomationSchedule heti és havi ütemezéseihez
+        - További információt itt találhat: https://github.com/Azure/azure-powershell/issues/3043
+* AzureBatch
+    - Új Get-AzureBatchJobPreparationAndReleaseTaskStatus parancsmag hozzáadása.
+    - Bájttartomány kezdő és záró értékének hozzáadása a Get-AzureBatchNodeFileContent paraméterekhez.
+* CognitiveServices
+    * Integráció a Cognitive Services Management SDK 1.0.0-ás verziójával.
+    * Kijavítottunk egy fióknév hosszának ellenőrzését érintő hibát.
+* Számítás
+    * Tárfiók típusának támogatása lemezképhez:
+        - A StorageAccountType paraméter a Set-AzureRmImageOsDisk és az Add-AzureRmImageDataDisk parancsmaghoz
+    * PrivateIP és PublicIP szolgáltatás a VMSS IP-konfigurációban:
+        - Új PrivateIPAddressVersion, PublicIPAddressConfigurationName, PublicIPAddressConfigurationIdleTimeoutInMinutes, DnsSetting nevek a New-AzureRmVmssIpConfig parancsmaghoz
+        - PrivateIPAddressVersion paraméter az IPv4 vagy IPv6 meghatározásához a New-AzureRmVmssIpConfig parancsmagban
+    * Teljesítmény-karbantartási szolgáltatás:
+        - Új PerformMaintenance kapcsolóparaméter az Restart-AzureRmVM parancsmaghoz.
+        - A Get-AzureRmVM -Status az adott virtuális gép teljesítmény-karbantartási információit jeleníti meg
+    * Virtuálisgép-identitási szolgáltatás:
+        - Új IdentityType paraméter a New-AzureRmVMConfig és az UpdateAzureRmVM parancsmaghoz
+        - A Get-AzureRmVM az adott virtuális gép identitásának információit jeleníti meg
+    * VMSS-identitási szolgáltatás:
+        - Új IdentityType paraméter a New-AzureRmVmssConfig parancsmaghoz
+        - A Get-AzureRmVmss az adott VMSS identitásának információit jeleníti meg
+    * VMSS rendszerindítási diagnosztikai szolgáltatás:
+        - Új parancsmag a VMSS-objektumok rendszerindítási diagnosztikájának beállításához: Set-AzureRmVmssBootDiagnostics
+        - Új BootDiagnostic paraméter a New-AzureRmVmssConfig parancsmaghoz
+    * VMSS LicenseType szolgáltatás:
+        - Új LicenseType paraméter a New-AzureRmVmssConfig parancsmaghoz
+    * RecoveryPolicyMode támogatása:
+        - Új RecoveryPolicyMode paraméter a New-AzureRmVmssConfig parancsmaghoz
+    * Számítási erőforrás termékváltozata szolgáltatás:
+        - Az új Get-AzureRmComputeResourceSku parancsmag a számítási erőforrások termékváltozatainak listáját jeleníti meg
+* DataFactories
+    * A New-AzureRmDataFactoryGatewayKey parancsmag elavult
+    * Új átjáró-hitelesítési kulcs szolgáltatás az új New-AzureRmDataFactoryGatewayAuthKey és Get-AzureRmDataFactoryGatewayAuthKey parancsmaggal
+* DataLakeAnalytics
+    * Számítási szabályzat CRUD-jának hozzáadása a következő parancsokkal:
+        - New-AzureRMDataLakeAnalyticsComputePolicy
+        - Get-AzureRMDataLakeAnalyticsComputePolicy
+        - Remove-AzureRMDataLakeAnalyticsComputePolicy
+        - Update-AzureRMDataLakeAnalyticsComputePolicy
+    * Feladat kapcsolati metaadatainak támogatása az ismétlődő feladatok és feladatfolyamatok segítéséhez Az alábbi parancsok lettek frissítve vagy hozzáadva:
+        - Submit-AzureRMDataLakeAnalyticsJob
+        - Get-AzureRMDataLakeAnalyticsJob
+        - Get-AzureRMDataLakeAnalyticsJobRecurrence
+        - Get-AzureRMDataLakeAnalyticsJobPipeline
+    * A token célrendszere frissült a feladat és katalógus API-k esetében, hogy a megfelelő Data Lake célrendszert használják az Azure Resource célrendszer helyett.
+* DataLakeStore
+    * Felhasználók által felügyelt KeyVault-kulcsrotálás támogatása a Set-AzureRMDataLakeStoreAccount parancsmagban
+    * Új kényelmi frissítés, amely automatikusan elindít egy `enableKeyVault`-hívást a felhasználó által felügyelt KeyVault hozzáadásakor vagy egy kulcs rotálásakor.
+    * A token célrendszere frissült a feladat és katalógus API-k esetében, hogy a megfelelő Data Lake célrendszert használják az Azure Resource célrendszer helyett.
+    * Kijavítottunk egy, az alábbi parancsmagokkal létrehozott vagy hozzáfűzött fájlok méretét korlátozó hibát:
+        - New-AzureRmDataLakeStoreItem
+        - Add-AzureRmDataLakeStoreItemContent
+* DNS
+    * Kijavítottuk az Get-AzureRmDnsZone átirányítási forgatókönyvében lévő hibát
+        - További információt itt találhat: https://github.com/Azure/azure-powershell/issues/4203
+* HDInsight
+    * Operations Management Suite (OMS) engedélyezésének és letiltásának támogatása
+    * Új parancsmagok
+        - Enable-AzureRmHDInsightOperationsManagementSuite
+        - Disable-AzureRmHDInsightOperationsManagementSuite
+        - Get-AzureRmHDInsightOperationsManagementSuite
+    * Új paraméterek a Spark egyéni konfigurációjának megadásához a Add-AzureRmHDInsightConfigValues parancsmaghoz
+        - SparkDefaults és SparkThriftConf paraméter a Spark 1.6-os verziójához
+        - Spark2Defaults és Spark2ThriftConf paraméter a Spark 2.0-ás verziójához
+* Insights
+    * 4215. hiba (módosítási kérés): eltávolítottuk a 15 napos korlátot a Get-AzureRmLog parancsmag időtartományából. Kisebb módosítások az egység tesztneveiben.
+    * Kijavítottuk a 3957. hibát a Get-AzureRmLog parancsmag esetében
+        - 1. probléma: A háttérrendszer a rekordokat 200 rekordot tartalmazó oldalakon adja vissza, és az oldalakat a folytatási token kapcsolja össze. A felhasználók azt tapasztalták, hogy a parancsmag csak 200 rekordot adott vissza, pedig több volt ennél. Ez a MaxEvents esetében megadott értéktől függetlenül bekövetkezett, kivéve, ha az érték kisebb volt, mint 200.
+        - 2. probléma: A dokumentáció helytelen adatokat tartalmazott erről a parancsmagról. Például a timewindow alapértelmezett értéke 1 óra volt.
+        - 1. javítás: A parancsmag mostantól a háttérrendszer által visszaadott folytatási tokent követi, amíg el nem éri a MaxEvents tulajdonságot vagy a készlet végét.<br>A MaxEvents alapértelmezett értéke 1000, az maximális értéke pedig 100000. A MaxEvents 1-nél kisebb értékei figyelmen kívül lesznek hagyva, és az alapértelmezett érték lesz használva. Ezek az értékek és viselkedések nem módosultak, és már helyesen vannak dokumentálva.<br>Egy alias (MaxRecords) hozzá lett adva a MaxEvents-hez, mivel a parancsmag neve már nem jelzi az eseményeket, csak a naplókat.
+        - 2. javítás: A dokumentáció helyes és részletesebb információkat tartalmaz: új alias, helyes időtartomány, helyes alapértelmezett, minimális és maximális értékek.
+* KeyVault
+    * E-mail-cím eltávolítása a címtárlekérdezésből, amikor a -UserPrincipalName meg van adva a Set-AzureRMKeyVaultAccessPolicy és a Remove-AzureRMKeyVaultAccessPolicy parancsmaghoz.
+      - Mostantól mindkét parancsmag rendelkezik -EmailAddress paraméterrel, amely a -UserPrincipalName paraméter helyett használható, ha az e-mail-cím lekérdezése megfelelő.  Ha egynél több egyező e-mail-cím található a címtárban, a parancsmag futtatása sikertelen lesz.
+* Network (Hálózat)
+    * New-AzureRmIpsecPolicy: A SALifeTimeSeconds és a SADataSizeKilobytes már nem kötelező paraméterek
+        - Az SALifeTimeSeconds alapértelmezett értéke 27000 másodperc
+        - Az SADataSizeKilobytes alapértelmezett értéke 102400000 KB
+    * Egyéni titkosítócsomagok konfigurálásának támogatása az SSL-szabályzat használatával és minden SSL-beállítási API megjelenítése az Application Gateway-ben
+        - Új választható paraméterek: -PolicyType, -PolicyName, -MinProtocolVersion, -Ciphersuite
+            - Add-AzureRmApplicationGatewaySslPolicy
+            - New-AzureRmApplicationGatewaySslPolicy
+            - Set-AzureRmApplicationGatewaySslPolicy
+        - Új Get-AzureRmApplicationGatewayAvailableSslOptions parancsmag (Alias: List-AzureRmApplicationGatewayAvailableSslOptions)
+        - Új Get-AzureRmApplicationGatewaySslPredefinedPolicy parancsmag (Alias: List-AzureRmApplicationGatewaySslPredefinedPolicy)
+    * Átirányítás támogatása az Application Gateway-ben
+        - Új Add-AzureRmApplicationGatewayRedirectConfiguration parancsmag
+        - Új Get-AzureRmApplicationGatewayRedirectConfiguration parancsmag
+        - Új New-AzureRmApplicationGatewayRedirectConfiguration parancsmag
+        - Új Remove-AzureRmApplicationGatewayRedirectConfiguration parancsmag
+        - Új Set-AzureRmApplicationGatewayRedirectConfiguration parancsmag
+        - Új választható paraméter: -RedirectConfiguration
+            - Add-AzureRmApplicationGatewayRequestRoutingRule
+            - New-AzureRmApplicationGatewayRequestRoutingRule
+            - Set-AzureRmApplicationGatewayRequestRoutingRule
+        - Új választható paraméter: -DefaultRedirectConfiguration
+            - Add-AzureRmApplicationGatewayUrlPathMapConfig
+            - New-AzureRmApplicationGatewayUrlPathMapConfig
+            - Set-AzureRmApplicationGatewayUrlPathMapConfig
+        - Új választható paraméter: -RedirectConfiguration
+            - Add-AzureRmApplicationGatewayPathRuleConfig
+            - New-AzureRmApplicationGatewayPathRuleConfig
+            - Set-AzureRmApplicationGatewayPathRuleConfig
+        - Új választható paraméter: -RedirectConfigurations
+            - New-AzureRmApplicationGateway
+            - Set-AzureRmApplicationGateway
+    * Azure-webhelyek támogatása az Application Gateway-ben
+        - Új New-AzureRmApplicationGatewayProbeHealthResponseMatch parancsmag
+        - Új választható paraméterek: -PickHostNameFromBackendHttpSettings, -MinServers, -Match
+            - Add-AzureRmApplicationGatewayProbeConfig
+            - New-AzureRmApplicationGatewayProbeConfig
+            - Set-AzureRmApplicationGatewayProbeConfig
+        - Új választható paraméterek: -PickHostNameFromBackendAddress, -AffinityCookieName, -ProbeEnabled, -Path
+            - Add-AzureRmApplicationGatewayBackendHttpSettings
+            - New-AzureRmApplicationGatewayBackendHttpSettings
+            - Set-AzureRmApplicationGatewayBackendHttpSettings
+    * Frissített Get-AzureRmPublicIPaddress parancsmag, amely a Virtuális gép méretezési csoportjával létrehozott publicipaddress erőforrásokat kéri le
+    * Új parancsmag a virtuális hálózat aktuális kihasználásának lekéréséhez
+        - Get-AzureRmVirtualNetworkUsageList
+* Profil
+    * Kijavítottuk az Import-AzureRmContext és a Save-AzureRmContext parancsmag használatakor fellépő hibát
+        - További információt itt találhat: https://github.com/Azure/azure-powershell/issues/3954
+* RecoveryServices.SiteRecovery
+    * Új modul bevezetése az Azure Site Recovery műveletekhez.
+        - Minden parancsmag a következővel kezdődik: AzureRmRecoveryServicesAsr*
+* SQL
+    * Adatszinkronizálási PowerShell-parancsmagok hozzáadása az AzureRM.Sql-hez
+    * Az AzureRmSqlServer parancsmagok frissítése az új REST API-verziók használatára, amelyek elkerülik az időtúllépéseket kiszolgáló létrehozásakor.
+    * A kiszolgálófrissítési parancsmagok elavultak, mert a régi kiszolgálóverzió (2.0) többé nem létezik.
+    * A New-AzureRmSqlServer és Set-AzureRmSqlServer parancsmaghoz hozzáadott új AssignIdentity választható paraméter támogatja az erőforrás-identitás kiépítését SQL kiszolgáló-erőforráshoz
+    * A ResourceGroupName paraméter mostantól nem kötelező a Get-AzureRmSqlServer parancsmaghoz
+        - További információt itt találhat: https://github.com/Azure/azure-powershell/issues/635
+* ServiceManagement ExpressRoute-hoz:
+    * A frissített New-AzureBgpPeering parancsmag az alábbi új beállításokat tartalmazza:
+        - PeerAddressType: Az IPv4 vagy az IPv6 értékei megadhatók a megfelelő címcsalád-típus BGP társviszonyának létrehozásához
+    * A frissített Set-AzureBgpPeering parancsmag az alábbi új beállításokat tartalmazza:
+        - PeerAddressType: Az IPv4 vagy az IPv6 értékei megadhatók a megfelelő címcsalád-típus BGP társviszonyának frissítéséhez
+    * A frissített Remove-AzureBgpPeering parancsmag az alábbi új beállításokat tartalmazza:
+        - PeerAddressType: Az IPv4, IPv6 vagy mindegyik értékei megadhatók a megfelelő címcsalád-típus vagy mindegyik BGP társviszonyának eltávolításához
+
+## <a name="20170607---version-410"></a>2017.06.07. – 4.1.0-ás verzió
+* AnalysisServices
+    * Új termékváltozatok: B1, B2, S0
+    * Vertikális felskálázás/leskálázás támogatásának hozzáadása
+* CognitiveServices
+    * Frissült a licencszerződések részletes megjelenítése a Cognitive Services-erőforrások létrehozásakor
+* Számítás
+    * Kijavítottuk a Test-AzureRmVMAEMExtension parancsmagot a több felügyelt lemezzel rendelkező virtuális gépekhez
+    * Frissült Set-AzureRmVMAEMExtension parancsmag: Gyorsítótárazási információ hozzáadása a prémium szintű felügyelt lemezekhez
+    * Add-AzureRmVhd: A virtuális merevlemezek méretkorlátja 4 TB-ra emelkedett.
+    * Stop-AzureRmVM: Dokumentáció tisztázása a STayProvisioned paraméter esetében
+    * New-AzureRmDiskUpdateConfig
+      * Elavult paraméterek: CreateOption, StorageAccountId, ImageReference, SourceUri, SourceResourceId
+    * Set-AzureRmDiskUpdateImageReference: Elavult parancsmag
+    * New-AzureRmSnapshotUpdateConfig
+      * Elavult paraméterek: CreateOption, StorageAccountId, ImageReference, SourceUri, SourceResourceId
+    * Set-AzureRmSnapshotUpdateImageReference Elavult parancsmag
+* DataLakeStore
+    * Enable-AzureRmDataLakeStoreKeyVault (Enable-AdlStoreKeyVault)
+      * KeyVault által felügyelt titkosítás engedélyezése a DataLake Store-hoz
+* DevTestLabs
+    * A frissített parancsmagok használhatók az aktuális és frissített DevTest Labs API-verzióval.
+* IoTHub
+    * Útválasztás támogatása az IoTHub-parancsmagokhoz
+* KeyVault
+  * Az új parancsmagok támogatják a hozzáférési kulcsokat a KeyVault által felügyelt tárfiókokhoz
+    * Get-AzureKeyVaultManagedStorageAccount
+    * Add-AzureKeyVaultManagedStorageAccount
+    * Remove-AzureKeyVaultManagedStorageAccount
+    * Update-AzureKeyVaultManagedStorageAccount
+    * Update-AzureKeyVaultManagedStorageAccountKey
+    * Get-AzureKeyVaultManagedStorageSasDefinition
+    * Set-AzureKeyVaultManagedStorageSasDefinition
+    * Remove-AzureKeyVaultManagedStorageSasDefinition
+* Network (Hálózat)
+    * Get-AzureRmNetworkUsage: Új parancsmag a hálózathasználat és a kapacitás részleteinek megjelenítésére
+    * Új GatewaySku beállítások a VirtualNetworkGateways-hez
+        * A VpnGw1, a VpnGw2 és a VpnGw3 a VPN-átjárókhoz hozzáadott új termékváltozatok
+    * Set-AzureRmNetworkWatcherConfigFlowLog
+      * Kijavítottuk a súgó példáit
+* NotificationHubs
+    * NotificationHubs parancsmagok átlátható frissítése új API esetében
+* Profil
+    * Resolve-AzureRmError
+      * Új parancsmag a parancsmagok által okozott hibák és kivételek részleteit jeleníti meg, beleértve a kiszolgálókérés és kiszolgálóválasz adatait
+    * Send-Feedback
+      * Bejelentkezés nélkül küldhető visszajelzés engedélyezése
+    * Get-AzureRmSubscription
+      * Kijavítottuk a CSP-előfizetések lekérésekor fellépő hibát
+* Erőforrások
+    * Kijavítottuk a hibát, amely miatt a Get-AzureRMRoleAssignment Hibás kérést eredményezett, ha a szerepkörkiosztások száma nagyobb volt, mint 1000
+        * A felhasználók mostantól akkor is használhatják a Get-AzureRMRoleAssignment parancsmagot, ha a visszaadandó szerepkörkiosztások száma nagyobb, mint 1000
+* SQL
+    * Restore-AzureRmSqlDatabase: Frissítettük a dokumentáció példáit
+* Tárolás
+    * AssignIdentity beállítás támogatása az erőforrásmód-tárfiók parancsmagokhoz
+        * New-AzureRmStorageAccount
+        * Set-AzureRmStorageAccount
+    * Ügyfélkulcs támogatása az erőforrásmód-tárfiók parancsmagokhoz
+        * Set-AzureRmStorageAccount
+        * New-AzureRmStorageAccountEncryptionKeySource
+* TrafficManager
+
+    * Új monitorozási beállítások: MonitorIntervalInSeconds, MonitorTimeoutInSeconds, MonitorToleratedNumberOfFailures
+    * Új monitorozási protokoll: TCP
+* ServiceManagement
+    * Add-AzureVhd: A virtuális merevlemezek méretkorlátja 4 TB-ra emelkedett.
+    * New-AzureBGPPeering: LegacyMode támogatása
+* Azure.Storage
+    * Frissítettük a helyettesítő karaktereket elfogadó paraméterek súgóját és a StorageContext típust
+
+## <a name="20170523---version-402"></a>2017.05.23. – 4.0.2-es verzió
+* Profil
+    * Add-AzureRmAccount
+      * Új `-EnvironmentName` paraméteralias az AzureRM.profile 2.x verzióival való visszamenőleges kompatibilitáshoz
+
+## <a name="20170512---version-401"></a>2017.05.12. – 4.0.1-es verzió
+ * Kijavítottuk a New-AzureStorageContext parancsmaggal kapcsolatos, offline forgatókönyvekben fellépő hibát: https://github.com/Azure/azure-powershell/issues/3939
+
+## <a name="20170510---version-400"></a>2017.05.10. – 4.0.0-ás verzió
+
 
 * Ez a kiadás jelentős változásokat tartalmaz. A változás részleteit és a meglévő szkriptekre gyakorolt hatást [a migrálási útmutatóban](https://aka.ms/azps-migration-guide) találja.
 * ApiManagement

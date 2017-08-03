@@ -9,11 +9,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
-ms.openlocfilehash: c51c727c1cb022eca59f819c7f24d8e058c677da
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.openlocfilehash: 164af369d49e3044e5409c28d8b6145ebc067313
+ms.sourcegitcommit: 020066d68d4ab68da162a4ae0cb4e239241f950f
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Az Azure PowerShell Service Management moduljának telepítése
 
@@ -35,7 +35,7 @@ Name          Version Path
 PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
 ```
 
-Ha a PowerShellGet nincs telepítve, akkor tekintse meg [A PowerShellGet beszerzése](install-azurerm-ps.md#how-to-get-powershellget) című szakaszt.
+Ha a PowerShellGet nincs telepítve, akkor tekintse meg [A PowerShellGet beszerzése](#how-to-get-powershellget) című szakaszt.
 
 ## <a name="step-2-install-azure-powershell"></a>2. lépés: Az Azure PowerShell telepítése
 
@@ -76,3 +76,20 @@ Az Azure PowerShell-modulok rendszeresen frissülnek. Ha a parancsmagokat tárgy
 Az Azure-ban gyakran előforduló feladatok némelyikének automatizálását segítő mintaszkripteket lásd a [Microsoft Azure Script Centerben](http://www.windowsazure.com/documentation/scripts/).
 
 Általános információk a Windows PowerShell telepítéséről, megismeréséről, használatáról és testreszabásáról: [Szkriptek használata a Windows PowerShell-lel](http://go.microsoft.com/fwlink/p/?linkid=320210).
+
+### <a name="how-to-get-powershellget"></a>A PowerShellGet beszerzése
+
+|Operációs rendszer verziója|Telepítési utasítások|
+|---|---|
+|Windows 10 vagy Windows Server 2016 rendszert használok|Az operációs rendszer részét képező Windows Management Framework (WMF) 5.0 beépített eleme|
+|Frissíteni szeretnék a PowerShell 5-ös verziójára|[A WMF legújabb verziójának telepítése](https://www.microsoft.com/en-us/download/details.aspx?id=54616)|
+|A PowerShell 3-as vagy 4-es verziójával rendelkező Windows-verziót használok|[A PackageManagement-modulok beszerzése](http://go.microsoft.com/fwlink/?LinkID=746217)|
+
+<a id="helpmechoose"></a>
+### <a name="checking-the-version-of-azure-powershell"></a>Az Azure PowerShell verziószámának ellenőrzése
+
+Habár javasoljuk, hogy a lehető leghamarabb frissítsen a legújabb verzióra, az Azure PowerShell számos verziója támogatott. Az Azure PowerShell telepített verziójának megállapításához futtassa a következő parancsot a parancssorban: `Get-Module AzureRM`.
+
+```powershell
+Get-Module AzureRM -list | Select-Object Name,Version,Path
+```
