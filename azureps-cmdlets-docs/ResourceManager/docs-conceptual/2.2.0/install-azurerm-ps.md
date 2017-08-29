@@ -1,6 +1,6 @@
 ---
-title: "<span data-ttu-id=\"d41d0-101\">Az Azure PowerShell telepítése és konfigurálása | Microsoft Docs</span><span class=\"sxs-lookup\"><span data-stu-id=\"d41d0-101\">Install and configure Azure PowerShell | Microsoft Docs</span></span>"
-description: "<span data-ttu-id=\"d41d0-102\">Az Azure PowerShell telepítése és konfigurálása az első használathoz.</span><span class=\"sxs-lookup\"><span data-stu-id=\"d41d0-102\">How to install and configure Azure PowerShell for first time use.</span></span>"
+title: "Az Azure PowerShell telepítése és konfigurálása | Microsoft Docs"
+description: "Az Azure PowerShell telepítése és konfigurálása az első használathoz."
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -16,13 +16,11 @@ ms.translationtype: HT
 ms.contentlocale: hu-HU
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="d41d0-103">Az Azure PowerShell telepítése és konfigurálása</span><span class="sxs-lookup"><span data-stu-id="d41d0-103">Install and configure Azure PowerShell</span></span>
-<a id="install-and-configure-azure-powershell" class="xliff"></a>
+# <a name="install-and-configure-azure-powershell"></a><span data-ttu-id="d41d0-103">Az Azure PowerShell telepítése és konfigurálása</span><span class="sxs-lookup"><span data-stu-id="d41d0-103">Install and configure Azure PowerShell</span></span>
 
 <span data-ttu-id="d41d0-104">Az Azure PowerShell-t a PowerShell-galériából javasolt telepíteni.</span><span class="sxs-lookup"><span data-stu-id="d41d0-104">Installing Azure PowerShell from the PowerShell Gallery is the preferred method of installation.</span></span>
 
-## <span data-ttu-id="d41d0-105">1. lépés: A PowerShellGet telepítése</span><span class="sxs-lookup"><span data-stu-id="d41d0-105">Step 1: Install PowerShellGet</span></span>
-<a id="step-1-install-powershellget" class="xliff"></a>
+## <a name="step-1-install-powershellget"></a><span data-ttu-id="d41d0-105">1. lépés: A PowerShellGet telepítése</span><span class="sxs-lookup"><span data-stu-id="d41d0-105">Step 1: Install PowerShellGet</span></span>
 
 <span data-ttu-id="d41d0-106">Ahhoz, hogy elemeket telepíthessen a PowerShell-galériából, szükség van a PowerShellGet modulra.</span><span class="sxs-lookup"><span data-stu-id="d41d0-106">Installing items from the PowerShell Gallery requires the PowerShellGet module.</span></span> <span data-ttu-id="d41d0-107">Győződjön meg arról, hogy rendelkezik a PowerShellGet megfelelő verziójával, és az egyéb rendszerkövetelmények is teljesülnek.</span><span class="sxs-lookup"><span data-stu-id="d41d0-107">Make sure you have the appropriate version of PowerShellGet and other system requirements.</span></span> <span data-ttu-id="d41d0-108">A következő parancs futtatásával ellenőrizze, hogy telepítve van-e a PowerShellGet a rendszerben.</span><span class="sxs-lookup"><span data-stu-id="d41d0-108">Run the following command to see if you have PowerShellGet installed on your system.</span></span>
 
@@ -43,8 +41,7 @@ PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1
 > [!NOTE]
 > <span data-ttu-id="d41d0-111">A PowerShellGet használatához olyan végrehajtási szabályzatra van szükség, amely lehetővé teszi a szkriptek futtatását.</span><span class="sxs-lookup"><span data-stu-id="d41d0-111">Using PowerShellGet requires an Execution Policy that allows you to run scripts.</span></span> <span data-ttu-id="d41d0-112">A PowerShell végrehajtási házirendjével kapcsolatos további információk: [A végrehajtási házirendek áttekintése](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_execution_policies).</span><span class="sxs-lookup"><span data-stu-id="d41d0-112">For more information about PowerShell's Execution Policy, see [About Execution Policies](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_execution_policies).</span></span>
 
-## <span data-ttu-id="d41d0-113">2. lépés: Az Azure PowerShell telepítése</span><span class="sxs-lookup"><span data-stu-id="d41d0-113">Step 2: Install Azure PowerShell</span></span>
-<a id="step-2-install-azure-powershell" class="xliff"></a>
+## <a name="step-2-install-azure-powershell"></a><span data-ttu-id="d41d0-113">2. lépés: Az Azure PowerShell telepítése</span><span class="sxs-lookup"><span data-stu-id="d41d0-113">Step 2: Install Azure PowerShell</span></span>
 
 <span data-ttu-id="d41d0-114">Az Azure Powershell PowerShell-galériából történő telepítéséhez emelt szintű jogosultságok szükségesek.</span><span class="sxs-lookup"><span data-stu-id="d41d0-114">Installing Azure PowerShell from the PowerShell Gallery requires elevated privileges.</span></span> <span data-ttu-id="d41d0-115">Futtassa a következő parancssort egy emelt szintű PowerShell-munkamenetből:</span><span class="sxs-lookup"><span data-stu-id="d41d0-115">Run the following command from an elevated PowerShell session:</span></span>
 
@@ -74,26 +71,22 @@ Are you sure you want to install the modules from 'PSGallery'?
 
 <span data-ttu-id="d41d0-122">Ha az Azure PowerShell korábbi verziójával rendelkezik, hibaüzenetet kaphat.</span><span class="sxs-lookup"><span data-stu-id="d41d0-122">If you have a previous version of Azure PowerShell installed you may receive an error.</span></span> <span data-ttu-id="d41d0-123">A probléma megoldásához tekintse meg a cikk [Frissítés az Azure PowerShell új verziójára ](#update-azps) című részét.</span><span class="sxs-lookup"><span data-stu-id="d41d0-123">To resolve this issue, see the [Updating to a new version of Azure PowerShell](#update-azps) section of this article.</span></span>
 
-## <span data-ttu-id="d41d0-124">3. lépés: Az AzureRM-modul betöltése</span><span class="sxs-lookup"><span data-stu-id="d41d0-124">Step 3: Load the AzureRM module</span></span>
-<a id="step-3-load-the-azurerm-module" class="xliff"></a>
+## <a name="step-3-load-the-azurerm-module"></a><span data-ttu-id="d41d0-124">3. lépés: Az AzureRM-modul betöltése</span><span class="sxs-lookup"><span data-stu-id="d41d0-124">Step 3: Load the AzureRM module</span></span>
 <span data-ttu-id="d41d0-125">A modul telepítése után be kell tölteni a azt a PowerShell-munkamenetbe.</span><span class="sxs-lookup"><span data-stu-id="d41d0-125">Once the module is installed, you need to load the module into your PowerShell session.</span></span> <span data-ttu-id="d41d0-126">Ezt a lépést normál (nem emelt szintű) PowerShell-munkamenetben kell végrehajtani.</span><span class="sxs-lookup"><span data-stu-id="d41d0-126">You should do this in a normal (non-elevated) PowerShell session.</span></span> <span data-ttu-id="d41d0-127">A modulok az `Import-Module` parancsmaggal, az alábbi módon tölthetők be:</span><span class="sxs-lookup"><span data-stu-id="d41d0-127">Modules are loaded using the `Import-Module` cmdlet, as follows:</span></span>
 
 ```powershell
 Import-Module AzureRM
 ```
 
-## <span data-ttu-id="d41d0-128">Következő lépések</span><span class="sxs-lookup"><span data-stu-id="d41d0-128">Next Steps</span></span>
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a><span data-ttu-id="d41d0-128">Következő lépések</span><span class="sxs-lookup"><span data-stu-id="d41d0-128">Next Steps</span></span>
 
 <span data-ttu-id="d41d0-129">Az Azure PowerShell használatával kapcsolatos további információkat az alábbi cikkekben olvashat:</span><span class="sxs-lookup"><span data-stu-id="d41d0-129">For more information about using Azure PowerShell, see the following articles:</span></span>
 
 * [<span data-ttu-id="d41d0-130">Ismerkedés az Azure PowerShell szolgáltatással</span><span class="sxs-lookup"><span data-stu-id="d41d0-130">Get started with Azure PowerShell</span></span>](get-started-azureps.md)
 
-## <span data-ttu-id="d41d0-131">Gyakori kérdések</span><span class="sxs-lookup"><span data-stu-id="d41d0-131">Frequently asked questions</span></span>
-<a id="frequently-asked-questions" class="xliff"></a>
+## <a name="frequently-asked-questions"></a><span data-ttu-id="d41d0-131">Gyakori kérdések</span><span class="sxs-lookup"><span data-stu-id="d41d0-131">Frequently asked questions</span></span>
 
-### <span data-ttu-id="d41d0-132">A PowerShellGet beszerzése</span><span class="sxs-lookup"><span data-stu-id="d41d0-132">How to get PowerShellGet</span></span>
-<a id="how-to-get-powershellget" class="xliff"></a>
+### <a name="how-to-get-powershellget"></a><span data-ttu-id="d41d0-132">A PowerShellGet beszerzése</span><span class="sxs-lookup"><span data-stu-id="d41d0-132">How to get PowerShellGet</span></span>
 
 |<span data-ttu-id="d41d0-133">Operációs rendszer verziója</span><span class="sxs-lookup"><span data-stu-id="d41d0-133">OS Version</span></span>|<span data-ttu-id="d41d0-134">Telepítési utasítások</span><span class="sxs-lookup"><span data-stu-id="d41d0-134">Install instructions</span></span>|
 |---|---|
@@ -102,8 +95,7 @@ Import-Module AzureRM
 |<span data-ttu-id="d41d0-139">A PowerShell 3-as vagy 4-es verziójával rendelkező Windows-verziót használok</span><span class="sxs-lookup"><span data-stu-id="d41d0-139">I am running on a version of Windows with PowerShell 3 or PowerShell 4</span></span>|[<span data-ttu-id="d41d0-140">A PackageManagement-modulok beszerzése</span><span class="sxs-lookup"><span data-stu-id="d41d0-140">Get the PackageManagement modules</span></span>](http://go.microsoft.com/fwlink/?LinkID=746217)|
 
 <a id="helpmechoose"></a>
-### <span data-ttu-id="d41d0-141">Az Azure PowerShell verziószámának ellenőrzése</span><span class="sxs-lookup"><span data-stu-id="d41d0-141">Checking the version of Azure PowerShell</span></span>
-<a id="checking-the-version-of-azure-powershell" class="xliff"></a>
+### <a name="checking-the-version-of-azure-powershell"></a><span data-ttu-id="d41d0-141">Az Azure PowerShell verziószámának ellenőrzése</span><span class="sxs-lookup"><span data-stu-id="d41d0-141">Checking the version of Azure PowerShell</span></span>
 
 <span data-ttu-id="d41d0-142">Habár javasoljuk, hogy a lehető leghamarabb frissítsen a legújabb verzióra, az Azure PowerShell számos verziója támogatott.</span><span class="sxs-lookup"><span data-stu-id="d41d0-142">Although we encourage you to upgrade to the latest version as early as possible, several versions of Azure PowerShell are support.</span></span> <span data-ttu-id="d41d0-143">Az Azure PowerShell telepített verziójának megállapításához futtassa a következő parancsot a parancssorban: `Get-Module AzureRM`.</span><span class="sxs-lookup"><span data-stu-id="d41d0-143">To determine the version of Azure PowerShell you have installed, run `Get-Module AzureRM` from your command line.</span></span>
 
@@ -111,8 +103,7 @@ Import-Module AzureRM
 Get-Module AzureRM -list | Select-Object Name,Version,Path
 ```
 
-### <span data-ttu-id="d41d0-144">Klasszikus telepítési módszerek támogatása</span><span class="sxs-lookup"><span data-stu-id="d41d0-144">Support for classic deployment methods</span></span>
-<a id="support-for-classic-deployment-methods" class="xliff"></a>
+### <a name="support-for-classic-deployment-methods"></a><span data-ttu-id="d41d0-144">Klasszikus telepítési módszerek támogatása</span><span class="sxs-lookup"><span data-stu-id="d41d0-144">Support for classic deployment methods</span></span>
 
 <span data-ttu-id="d41d0-145">Ha van olyan üzemelő példánya, amely a klasszikus telepítési modellt használja, akkor az Azure PowerShell Service Management verzióját telepítheti.</span><span class="sxs-lookup"><span data-stu-id="d41d0-145">If you have deployments that use the classic deployment model you can install the Service Management version of Azure PowerShell.</span></span> <span data-ttu-id="d41d0-146">További információ: [Az Azure PowerShell Service Management moduljának telepítése](/powershell/azure/servicemanagement/install-azure-ps).</span><span class="sxs-lookup"><span data-stu-id="d41d0-146">For more information, see [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps).</span></span> <span data-ttu-id="d41d0-147">Az Azure és AzureRM-modulok ugyanazokat a függőségeket használják.</span><span class="sxs-lookup"><span data-stu-id="d41d0-147">The Azure and AzureRM modules share common dependencies.</span></span> <span data-ttu-id="d41d0-148">Ha az Azure- és az AzureRM-modult egyaránt használja, minden csomagnak ugyanazt a verzióját kell telepítenie.</span><span class="sxs-lookup"><span data-stu-id="d41d0-148">If you use both the Azure and AzureRM modules, you should install the same version of each package.</span></span>
 
@@ -141,8 +132,7 @@ Install-Module AzureRM -AllowClobber
 
 <span data-ttu-id="d41d0-153">További információért tekintse meg az [Install-Module](https://msdn.microsoft.com/powershell/reference/5.1/PowerShellGet/install-module) súgótémakört.</span><span class="sxs-lookup"><span data-stu-id="d41d0-153">For more information, see the help topic for [Install-Module](https://msdn.microsoft.com/powershell/reference/5.1/PowerShellGet/install-module).</span></span>
 
-### <span data-ttu-id="d41d0-154">Modulverziók párhuzamos telepítése</span><span class="sxs-lookup"><span data-stu-id="d41d0-154">Installing module versions side by side</span></span>
-<a id="installing-module-versions-side-by-side" class="xliff"></a>
+### <a name="installing-module-versions-side-by-side"></a><span data-ttu-id="d41d0-154">Modulverziók párhuzamos telepítése</span><span class="sxs-lookup"><span data-stu-id="d41d0-154">Installing module versions side by side</span></span>
 
 <span data-ttu-id="d41d0-155">A PowerShellGet-metódus az egyetlen módszer, amely támogatja több verzió telepítését.</span><span class="sxs-lookup"><span data-stu-id="d41d0-155">The PowerShellGet method of installation is the only method that supports the installation of multiple versions.</span></span> <span data-ttu-id="d41d0-156">Előfordulhat például, hogy rendelkezik az Azure PowerShell előző verziójával írt szkriptekkel, amelyek frissítésére nincs ideje vagy erőforrása.</span><span class="sxs-lookup"><span data-stu-id="d41d0-156">For example, you may have scripts written using a previous version of Azure PowerShell that you don't have the time or resources to updated.</span></span> <span data-ttu-id="d41d0-157">A következő parancsok bemutatják, hogy telepítheti az Azure PowerShell több verzióját:</span><span class="sxs-lookup"><span data-stu-id="d41d0-157">The following commands illustrate how to install multiple versions of Azure PowerShell:</span></span>
 
@@ -160,7 +150,6 @@ Import-Module AzureRM -RequiredVersion 1.2.9
 > [!NOTE]
 > <span data-ttu-id="d41d0-160">A 2.1.0-ás és az 1.2.6-os modulverziók az elsők, amelyeket párhuzamos telepítésre és használatra terveztek.</span><span class="sxs-lookup"><span data-stu-id="d41d0-160">Version 2.1.0 and version 1.2.6 are the first module versions designed to be installed and used side by side.</span></span> <span data-ttu-id="d41d0-161">Az Azure PowerShell korábbi verziónak betöltésekor az **AzureRM.Profile**-modul nem kompatibilis verziói töltődnek be.</span><span class="sxs-lookup"><span data-stu-id="d41d0-161">When loading an earlier version of the Azure PowerShell, incompatible versions of the **AzureRM.Profile** module are loaded.</span></span> <span data-ttu-id="d41d0-162">Ezért a parancsmagok minden parancsmag végrehajtásánál bejelentkezést fognak kérni.</span><span class="sxs-lookup"><span data-stu-id="d41d0-162">This results in the cmdlets prompting you to log in whenever you execute a cmdlet.</span></span>
 
-### <span data-ttu-id="d41d0-163">Egyéb telepítési módszerek</span><span class="sxs-lookup"><span data-stu-id="d41d0-163">Other installation methods</span></span>
-<a id="other-installation-methods" class="xliff"></a>
+### <a name="other-installation-methods"></a><span data-ttu-id="d41d0-163">Egyéb telepítési módszerek</span><span class="sxs-lookup"><span data-stu-id="d41d0-163">Other installation methods</span></span>
 
 <span data-ttu-id="d41d0-164">A Webplatform-telepítő vagy az MSI-csomag használatával történő telepítéssel kapcsolatos további információkért lásd: [Egyéb telepítési módszerek](other-install.md)</span><span class="sxs-lookup"><span data-stu-id="d41d0-164">For information about installing using the Web Platform Installer or the MSI Package, see [Other installation methods](other-install.md)</span></span>

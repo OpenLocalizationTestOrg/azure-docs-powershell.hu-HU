@@ -17,13 +17,11 @@ ms.translationtype: HT
 ms.contentlocale: hu-HU
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="e1466-103">Kibocsátási megjegyzések</span><span class="sxs-lookup"><span data-stu-id="e1466-103">Release notes</span></span>
-<a id="release-notes" class="xliff"></a>
+# <a name="release-notes"></a><span data-ttu-id="e1466-103">Kibocsátási megjegyzések</span><span class="sxs-lookup"><span data-stu-id="e1466-103">Release notes</span></span>
 
 <span data-ttu-id="e1466-104">Az alábbiakban az Azure PowerShell jelen kiadásában végrehajtott módosítások listája olvasható.</span><span class="sxs-lookup"><span data-stu-id="e1466-104">This is a list of changes made to Azure PowerShell in this release.</span></span>
 
-## <span data-ttu-id="e1466-105">3.8.0-ás verzió</span><span class="sxs-lookup"><span data-stu-id="e1466-105">Version 3.8.0</span></span>
-<a id="version-380" class="xliff"></a>
+## <a name="version-380"></a><span data-ttu-id="e1466-105">3.8.0-ás verzió</span><span class="sxs-lookup"><span data-stu-id="e1466-105">Version 3.8.0</span></span>
 * <span data-ttu-id="e1466-106">Számítás</span><span class="sxs-lookup"><span data-stu-id="e1466-106">Compute</span></span>
   - <span data-ttu-id="e1466-107">A Get-* parancsmagok hibájának javítása több oldalnyi adat (több, mint 120 elem) lekérésének lehetővé tétele érdekében</span><span class="sxs-lookup"><span data-stu-id="e1466-107">Fix bug in Get-* cmdlets, to allow retrieving multiple pages of data (more than 120 items)</span></span>
 * <span data-ttu-id="e1466-108">DataLakeAnalytics</span><span class="sxs-lookup"><span data-stu-id="e1466-108">DataLakeAnalytics</span></span>

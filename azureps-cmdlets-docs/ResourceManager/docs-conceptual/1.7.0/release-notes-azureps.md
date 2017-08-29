@@ -17,13 +17,11 @@ ms.translationtype: HT
 ms.contentlocale: hu-HU
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="d7a41-103">Kibocsátási megjegyzések</span><span class="sxs-lookup"><span data-stu-id="d7a41-103">Release notes</span></span>
-<a id="release-notes" class="xliff"></a>
+# <a name="release-notes"></a><span data-ttu-id="d7a41-103">Kibocsátási megjegyzések</span><span class="sxs-lookup"><span data-stu-id="d7a41-103">Release notes</span></span>
 
 <span data-ttu-id="d7a41-104">Az alábbiakban az Azure PowerShell jelen kiadásában végrehajtott módosítások listája olvasható.</span><span class="sxs-lookup"><span data-stu-id="d7a41-104">This is a list of changes made to Azure PowerShell in this release.</span></span>
 
-## <span data-ttu-id="d7a41-105">1.7.0-ás verzió</span><span class="sxs-lookup"><span data-stu-id="d7a41-105">Version 1.7.0</span></span>
-<a id="version-170" class="xliff"></a>
+## <a name="version-170"></a><span data-ttu-id="d7a41-105">1.7.0-ás verzió</span><span class="sxs-lookup"><span data-stu-id="d7a41-105">Version 1.7.0</span></span>
 
 * <span data-ttu-id="d7a41-106">**A -Force, –Confirm és $ConfirmPreference paraméterek viselkedésének módosítása minden parancsmag esetében. Ezt a megvalósítást azért módosítottuk, hogy megfeleljen a PowerShell irányelveinek. A legtöbb parancsmag esetében ez a Force paraméter eltávolítását, valamint a ShouldProcess adatkérés kihagyását jelenti. A felhasználóknak továbbá bele kell foglalniuk a következő paramétert a PowerShell-szkriptjeikbe: -Confirm:$false.**</span><span class="sxs-lookup"><span data-stu-id="d7a41-106">**Behavioral change for -Force, –Confirm and $ConfirmPreference parameters for all cmdlets. We are changing this implementation to be in line with PowerShell guidelines. For most cmdlets, this means removing the Force parameter and to skip the ShouldProcess prompt, users will need to include the parameter: ‘-Confirm:$false’ in their PowerShell scripts.**</span></span> <span data-ttu-id="d7a41-107">A módosítások a következő problémákat érintik:</span><span class="sxs-lookup"><span data-stu-id="d7a41-107">This changes are addressing following issues:</span></span>
   - <span data-ttu-id="d7a41-108">A –WhatIf funkció megvalósításának javítása, amely lehetővé teszi a felhasználók számára, hogy bármilyen tényleges módosítás nélkül megállapíthassák egy parancsmag vagy szkript hatásait</span><span class="sxs-lookup"><span data-stu-id="d7a41-108">Correct implementation of –WhatIf functionality, allowing a user to determine the effects of a cmdlet or script without making any actual changes</span></span>

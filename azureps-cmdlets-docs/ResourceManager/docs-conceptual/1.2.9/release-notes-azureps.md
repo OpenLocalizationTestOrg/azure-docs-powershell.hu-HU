@@ -17,13 +17,11 @@ ms.translationtype: HT
 ms.contentlocale: hu-HU
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="4431d-103">Kibocsátási megjegyzések</span><span class="sxs-lookup"><span data-stu-id="4431d-103">Release notes</span></span>
-<a id="release-notes" class="xliff"></a>
+# <a name="release-notes"></a><span data-ttu-id="4431d-103">Kibocsátási megjegyzések</span><span class="sxs-lookup"><span data-stu-id="4431d-103">Release notes</span></span>
 
 <span data-ttu-id="4431d-104">Az alábbiakban az Azure PowerShell jelen kiadásában végrehajtott módosítások listája olvasható.</span><span class="sxs-lookup"><span data-stu-id="4431d-104">This is a list of changes made to Azure PowerShell in this release.</span></span>
 
-## <span data-ttu-id="4431d-105">1.2.9-es verzió</span><span class="sxs-lookup"><span data-stu-id="4431d-105">Version 1.2.9</span></span>
-<a id="version-129" class="xliff"></a>
+## <a name="version-129"></a><span data-ttu-id="4431d-105">1.2.9-es verzió</span><span class="sxs-lookup"><span data-stu-id="4431d-105">Version 1.2.9</span></span>
 
 <span data-ttu-id="4431d-106">A kiadás változásai</span><span class="sxs-lookup"><span data-stu-id="4431d-106">Changes This Release</span></span>
 
