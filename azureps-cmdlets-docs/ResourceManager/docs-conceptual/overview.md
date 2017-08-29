@@ -10,11 +10,11 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
 ms.date: 07/26/2017
-ms.openlocfilehash: 3772b68949dc9dba110e6015c8d2a8b944b26528
-ms.sourcegitcommit: 20bcef86db4e4869125bb63085fcffd009c19280
+ms.openlocfilehash: 02bfc15fec83ed4078d9a054b450c5a3cd66b8e2
+ms.sourcegitcommit: db5c50de90764a9bdc7c1f1dbca3aed5bfeb05fa
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 08/22/2017
 ---
 # <a name="overview-of-azure-powershell"></a>Az Azure PowerShell áttekintése
 
@@ -29,13 +29,14 @@ A következő példák segítenek megismerkedni az Azure PowerShell általános 
 * [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 * [SQL Database-adatbázisok](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
-
 > [!NOTE] > Ha van olyan üzemelő példánya, amely a klasszikus telepítési modellt használja, és nem alakítható át, akkor az Azure PowerShell Service Management verzióját telepítheti. További információ: [Az Azure PowerShell Service Management moduljának telepítése](/powershell/azure/servicemanagement/install-azure-ps).
-
 
 ### <a name="need-help-with-powershell"></a>Segítségre van szüksége a PowerShell-lel kapcsolatban?
 
-Ha nem ismeri a PowerShellt, érdemes lehet elolvasni a PowerShellt bemutató anyagot. A PowerShell használatának első lépéseivel kapcsolatban lásd: [Szkriptek használata a PowerShellben](https://technet.microsoft.com/library/bb978526.aspx).
+Ha nem ismeri a PowerShellt, érdemes lehet elolvasni a PowerShellt bemutató anyagot.
+
+* [A PowerShell telepítése](/powershell/scripting/installing-windows-powershell)
+* [Parancsprogram-kezelés a PowerShell-lel](/powershell/scripting/scripting-with-windows-powershell)
 
 Megtekintheti a következő videót is: [A PowerShell alapjai: (1. rész) Ismerkedés a PowerShell-lel](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1).
 

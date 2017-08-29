@@ -46,7 +46,7 @@ Az alábbiakban az Azure PowerShell jelen kiadásában végrehajtott módosítá
   * Megjelent az EnableAcceleratedNetworking paraméter az Add-AzureRmVmssNetworkInterfaceConfig parancsmagban
   * Megjelent az InstanceId paraméter a Set-AzureRmVmss parancsmagban
   * A MaintenanceRedeployStatus paraméter megjelenítése a Get-AzureRmVM parancsmag kimenetében
-  * A korlátozás és a képesség megjelenítése a Get-AzureRmComputeResourceSku parancsmag táblázatformátumában
+  * A korlátozások és a képességek megjelenítése a Get-AzureRmComputeResourceSku parancsmag táblázatformátumában
 * DataLakeStore
   * A probléma javítása: https://github.com/Azure/azure-powershell/issues/4323
 * EventHub
