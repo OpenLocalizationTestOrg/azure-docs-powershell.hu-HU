@@ -9,44 +9,18 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/15/2017
-ms.openlocfilehash: 9cee582f74b7f3260c6ae167a8ac358d360ad8ab
-ms.sourcegitcommit: 45587b5091293288e16cfae8ac412e0d42f8f450
+ms.date: 09/06/2017
+ms.openlocfilehash: 73c099375cecc8abdd5d6179109513946e7e793b
+ms.sourcegitcommit: 202ec2df66c40a60f47ea06b30a6701ad444d229
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="other-installation-methods"></a>Egyéb telepítési módszerek
 
-Az Azure PowerShell többféle módszerrel telepíthető. Az előnyben részesített módszer a PowerShellGet használata a PowerShell-galériával. Az Azure PowerShell telepíthető a Webplatform-telepítő (WebPI) vagy a [GitHubról](https://github.com/Azure/azure-powershell/releases/latest) elérhető MSI-fájl használatával.
+Az Azure PowerShell többféle módszerrel telepíthető. Az előnyben részesített módszer a PowerShellGet használata a PowerShell-galériával. Az Azure PowerShell a Windows rendszeren a Webplatform-telepítő (WebPI) vagy a GitHubról elérhető MSI-fájl használatával telepíthető. Az Azure PowerShell Docker-tárolóban is telepíthető.
 
-## <a name="docker"></a>Docker
-
-Elérhető az Azure PowerShell-hez előre konfigurált Docker-rendszerkép.
-
-A tárolót a következő paranccsal futtathatja: `docker run`.
-
-```powershell
-docker run azuresdk/azure-powershell
-```
-
-Emellett elérhető a parancsmagok egy részhalmaza PowerShell Core-tároló formájában.
-
-Mac és Linux rendszereken a `latest` rendszerképet használhatja.
-
-```bash
-docker run azuresdk/azure-powershell-core:latest
-```
-
-Windowson a `nanoserver` rendszerképet használhatja.
-
-```powershell
-docker run azuresdk/azure-powershell-core:nanoserver
-```
-
-Az Azure PowerShell az `Install-Module` parancsmaggal van telepítve a [PowerShell-galériából](https://www.powershellgallery.com/).
-
-## <a name="install-using-the-web-platform-installer"></a>Telepítés a Webplatform-telepítővel
+## <a name="install-on-windows-using-the-web-platform-installer"></a>Telepítés Windows rendszeren a Webplatform-telepítővel
 
 A legújabb Azure PowerShell ugyanúgy telepíthető a WebPI-ről, ahogy a korábbi verziók.
 Töltse le az [Azure PowerShell WebPI csomagot](http://aka.ms/webpi-azps), és indítsa el a telepítést.
@@ -88,6 +62,32 @@ Ez a hiba a gép újraindításával vagy a modul teljes útvonallal való impor
 Import-Module "$env:ProgramFiles(x86)\Microsoft SDKs\Azure\PowerShell\AzureRM.psd1"
 ```
 
-## <a name="install-using-the-msi-package"></a>Telepítés az MSI-csomaggal
+## <a name="install-on-windows-using-the-msi-package"></a>Telepítés Windows rendszeren az MSI-csomaggal
 
 Az Azure PowerShell telepíthető a [GitHubról](https://github.com/Azure/azure-powershell/releases/latest) elérhető MSI-fájllal is. Ha az Azure-modulok korábbi verziói már telepítve vannak, a telepítő automatikusan eltávolítja őket. Az MSI-csomag a(z) `$env:ProgramFiles\WindowsPowerShell\Modules` helyre telepíti a modulokat, azonban nem hoz létre verzióspecifikus mappákat.
+
+## <a name="install-in-a-docker-container"></a>Telepítés Docker-tárolóban
+
+Elérhető az Azure PowerShell-hez előre konfigurált Docker-rendszerkép.
+
+A tárolót a következő paranccsal futtathatja: `docker run`.
+
+```powershell
+docker run azuresdk/azure-powershell
+```
+
+Emellett elérhető a parancsmagok egy részhalmaza PowerShell Core-tároló formájában.
+
+Mac és Linux rendszereken a `latest` rendszerképet használhatja.
+
+```bash
+docker run azuresdk/azure-powershell-core:latest
+```
+
+Windowson a `nanoserver` rendszerképet használhatja.
+
+```powershell
+docker run azuresdk/azure-powershell-core:nanoserver
+```
+
+Az Azure PowerShell az `Install-Module` parancsmaggal van telepítve a [PowerShell-galériából](https://www.powershellgallery.com/).

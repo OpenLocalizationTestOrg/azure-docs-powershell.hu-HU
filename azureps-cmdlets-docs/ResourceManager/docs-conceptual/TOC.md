@@ -1,16 +1,22 @@
 # [Azure PowerShell](overview.md)
+
 ## [Telepítés](install-azurerm-ps.md)
+### [Telepítés macOS és Linux rendszeren](install-azurermps-maclinux.md)
 ### [Egyéb telepítési módszerek](other-install.md)
+
 ## [Első lépések](get-started-azureps.md)
 ## [Bejelentkezés](authenticate-azureps.md)
 ### [Szolgáltatásnév létrehozása](create-azure-service-principal-azureps.md)
+
 ## [Lekérdezések](queries-azureps.md)
 ## [Formázás](formatting-output.md)
 ## [Előfizetések](manage-subscriptions-azureps.md)
+
 ## Üzembe helyezés
 ### [Üzembe helyezés Resource Manager-sablonokkal](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-template-deploy)
 ### [Resource Manager-sablonok exportálása](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-export-template-powershell)
 ### [Saját Resource Manager-sablon üzembe helyezése SAS-jogkivonat használatával](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-powershell-sas-token)
+
 ## [Kibocsátási megjegyzések](release-notes-azureps.md)
 
 # Mintaszkriptek
