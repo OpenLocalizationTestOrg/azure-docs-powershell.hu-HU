@@ -1,9 +1,14 @@
 # [Azure PowerShell](../overview.md)
+
 ## [Telepítés](../install-azurerm-ps.md)
+### [Telepítés macOS és Linux rendszeren](../install-azurermps-maclinux.md)
 ### [Egyéb telepítési módszerek](../other-install.md)
+
 ## [Első lépések](../get-started-azureps.md)
+
 ## [Bejelentkezés](../authenticate-azureps.md)
 ### [Szolgáltatásnév létrehozása](../create-azure-service-principal-azureps.md)
+
 ## [Lekérdezések](../queries-azureps.md)
 ## [Formázás](../formatting-output.md)
 ## [Előfizetések](../manage-subscriptions-azureps.md)
