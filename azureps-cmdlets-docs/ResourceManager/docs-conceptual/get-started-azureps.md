@@ -9,22 +9,41 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 03/30/2017
-ms.openlocfilehash: f1c13317f0b42b547166a8130dd8c29bed5759c9
-ms.sourcegitcommit: db5c50de90764a9bdc7c1f1dbca3aed5bfeb05fa
+ms.date: 08/31/2017
+ms.openlocfilehash: 2cd3fc8e955ae826471dceee79d5e6b70070d416
+ms.sourcegitcommit: e6b7e20bbd04eda51416c56b13f867102b602d1a
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="getting-started-with-azure-powershell"></a>Ismerkedés az Azure PowerShell-lel
 
-Az Azure PowerShell az Azure-erőforrások parancssori kezelésére és adminisztrálására, valamint az Azure Resource Manageren futtatható automatizálási szkriptek létrehozására készült. A cikk segítséget nyújt a használatának megkezdésében, és ismerteti az alapvető fogalmakat.
+Az Azure PowerShell az Azure-erőforrások parancssori kezelésére és adminisztrálására, valamint az Azure Resource Manageren futtatható automatizálási szkriptek létrehozására készült. Használhatja a böngészőjében az [Azure Cloud Shell-lel](/azure/cloud-shell/overview), vagy telepítheti a helyi gépen, és használhatja bármely PowerShell-munkamenetben. A cikk segítséget nyújt a használatának megkezdésében, és ismerteti az alapvető fogalmakat.
+
+## <a name="connect"></a>Kapcsolódás
+
+Első lépésként a legegyszerűbb módszer, ha [elindítja a Cloud Shellt](/azure/cloud-shell/quickstart).
+
+1. Indítsa el a Cloud Shellt az Azure Portal felső navigációs szakaszából.
+
+   ![Shell ikon](~/media/get-started-azureps/shell-icon.png)
+
+2. Válassza ki a használni kívánt előfizetést, és hozzon létre egy tárfiókot.
+
+   ![Create a storage account](~/media/get-started-azureps/storage-prompt.png)
+
+A tároló létrehozása után a Cloud Shell megnyit egy PowerShell-munkamenetet a böngészőben.
+
+![Cloud Shell a PowerShellhez](~/media/get-started-azureps/cloud-powershell.png)
+
+Telepítheti az Azure PowerShellt, és helyileg is használhatja PowerShell-munkamenetben.
 
 ## <a name="install-azure-powershell"></a>Az Azure PowerShell telepítése
 
 Első lépésként győződjön meg róla, hogy az Azure PowerShell legújabb verziója van telepítve. A legújabb kiadással kapcsolatos információkért lásd a [kibocsátási megjegyzéseket](./release-notes-azureps.md).
 
 1. [Telepítse az Azure PowerShellt](install-azurerm-ps.md).
+
 2. A telepítés sikerességének ellenőrzéséhez futtassa a `Get-Module AzureRM` parancsot a parancssorról.
 
 ## <a name="log-in-to-azure"></a>Jelentkezzen be az Azure-ba
@@ -51,7 +70,7 @@ Hozzunk létre egy erőforráscsoportot „MyResourceGroup” néven az Azure we
 New-AzureRmResourceGroup -Name 'myResourceGroup' -Location 'westeurope'
 ```
 
-```
+```Output
 ResourceGroupName : myResourceGroup
 Location          : westeurope
 ProvisioningState : Succeeded
@@ -123,7 +142,7 @@ New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfi
 
 A `New-AzureRmVM` parancs kimeneti eredményei akkor érhetők el, amikor a virtuális gép létrejött és használatra kész.
 
-```
+```Output
 RequestId IsSuccessStatusCode StatusCode ReasonPhrase
 --------- ------------------- ---------- ------------
                          True         OK OK
@@ -135,7 +154,7 @@ Most jelentkezzen be az újonnan létrehozott Windows Server-alapú virtuális g
 $publicIp | Select-Object Name,IpAddress
 ```
 
-```
+```Output
 Name                  IpAddress
 ----                  ---------
 mypublicdns1400512543 xx.xx.xx.xx
@@ -143,12 +162,11 @@ mypublicdns1400512543 xx.xx.xx.xx
 
 Windows-alapú rendszer használata esetén ezt a parancssorból az mstsc parancs használatával teheti meg:
 
-```
+```powershell
 mstsc /v:xx.xxx.xx.xxx
 ```
 
 A bejelentkezéshez ugyanazt a felhasználónév–jelszó kombinációt adja meg, amelyet a virtuális gép létrehozása során használt.
-
 
 ## <a name="create-a-linux-virtual-machine"></a>Linux rendszerű virtuális gép létrehozása
 
@@ -219,7 +237,7 @@ Most, hogy a virtuális gép létrejött, bejelentkezhet az új Linux rendszerű
 ssh xx.xxx.xxx.xxx
 ```
 
-```
+```Output
 Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.19.0-65-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com/
@@ -247,7 +265,7 @@ individual files in /usr/share/doc/*/copyright.
 Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 applicable law.
 
-my-login@MyLinuxVM:~$
+my-login@MyLinuxVM:../../..$
 ```
 
 ## <a name="creating-other-resources-in-azure"></a>Egyéb erőforrások létrehozása az Azure-ban
@@ -291,7 +309,7 @@ Get-AzureRmResource |
     Select-Object Name,Location,ResourceType
 ```
 
-```
+```Output
 Name                                                  Location   ResourceType
 ----                                                  --------   ------------
 myLinuxVM_OsDisk_1_36ca038791f642ba91270879088c249a   westeurope Microsoft.Compute/disks
@@ -320,7 +338,7 @@ Remove-AzureRmVM -Name myWindowsVM -ResourceGroupName myResourceGroup
 
 A rendszer rákérdez az erőforrás törlésének jóváhagyására.
 
-```
+```Output
 Confirm
 Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -332,7 +350,7 @@ Egyszerre több erőforrást is törölhet. A következő parancs például tör
 Remove-AzureRmResourceGroup -Name myResourceGroup
 ```
 
-```
+```Output
 Confirm
 Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -351,5 +369,5 @@ Az Azure PowerShell használatával kapcsolatos további tudnivalókért tekints
 * [Szolgáltatásnevek létrehozása az Azure PowerShell használatával](create-azure-service-principal-azureps.md)
 * A régi kiadásokról való áttéréssel kapcsolatban olvassa át a kibocsátási megjegyzéseket: [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).
 * Segítség kérése a közösségtől:
-  + [Azure-fórum az MSDN-en](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-  + [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
+  * [Azure-fórum az MSDN-en](http://go.microsoft.com/fwlink/p/?LinkId=320212)
+  * [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
