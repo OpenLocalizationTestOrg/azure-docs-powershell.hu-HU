@@ -9,14 +9,17 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/17/2017
-ms.openlocfilehash: 0c1500a8748a3aa4546c6ce1e8d16a635b056edb
+ms.date: 08/31/2017
+ms.openlocfilehash: 0e560332c87fdcc8b7365f2271de24481003a4d6
 ms.sourcegitcommit: b256bf48e15ee98865de0fae50e7b81878b03a54
 ms.translationtype: HT
 ms.contentlocale: hu-HU
 ms.lasthandoff: 11/03/2017
 ---
 # <a name="install-and-configure-azure-powershell"></a>Az Azure PowerShell telepítése és konfigurálása
+
+Ez a cikk az Azure PowerShell-modulok Windows-környezetben való telepítésének lépéseit ismerteti.
+Ha a macOS vagy Linux rendszeren szeretné használni az Azure PowerShellt, tekintse meg a következő cikket: [Az Azure PowerShell telepítése és konfigurálása macOS és Linux rendszeren](install-azurermps-maclinux.md).
 
 Az Azure PowerShell-t a PowerShell-galériából javasolt telepíteni.
 
@@ -30,7 +33,7 @@ Get-Module PowerShellGet -list | Select-Object Name,Version,Path
 
 Az alábbihoz hasonló kimenetnek kell megjelennie:
 
-```
+```Output
 Name          Version Path
 ----          ------- ----
 PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
@@ -39,7 +42,7 @@ PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1
 Ha a PowerShellGet nincs telepítve, akkor tekintse meg a jelen cikk [A PowerShellGet-modul beszerzése](#how-to-get-powershellget) című szakaszát.
 
 > [!NOTE]
-> A PowerShellGet használatához olyan végrehajtási szabályzatra van szükség, amely lehetővé teszi a szkriptek futtatását. A PowerShell végrehajtási házirendjével kapcsolatos további információk: [A végrehajtási házirendek áttekintése](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_execution_policies).
+> A PowerShellGet használatához olyan végrehajtási szabályzatra van szükség, amely lehetővé teszi a szkriptek futtatását. A PowerShell végrehajtási házirendjével kapcsolatos további információk: [A végrehajtási házirendek áttekintése](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 ## <a name="step-2-install-azure-powershell"></a>2. lépés: Az Azure PowerShell telepítése
 
@@ -47,12 +50,12 @@ Az Azure Powershell PowerShell-galériából történő telepítéséhez emelt s
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
-Install-Module AzureRM
+Install-Module AzureRM -AllowClobber
 ```
 
 Alapértelmezés szerint a PowerShell-galéria nincs konfigurálva a PowerShellGet megbízható tárházaként. A PSGallery első használatakor a következő üzenet jelenik meg:
 
-```
+```Output
 Untrusted repository
 
 You are installing the modules from an untrusted repository. If you trust this repository, change
@@ -84,6 +87,10 @@ Az Azure PowerShell használatával kapcsolatos további információkat az alá
 
 * [Ismerkedés az Azure PowerShell szolgáltatással](get-started-azureps.md)
 
+## <a name="reporting-issues-and-feedback"></a>Hibák jelentése és visszajelzés
+
+Ha az eszköz használata során bármilyen hibát tapasztal, jelentse be a problémát a GitHub-adattár [Hibák](https://github.com/Azure/azure-powershell/issues) szakaszában. A parancssorból a `Send-Feedback` parancsmaggal küldhet visszajelzést.
+
 ## <a name="frequently-asked-questions"></a>Gyakori kérdések
 
 ### <a name="how-to-get-powershellget"></a>A PowerShellGet beszerzése
@@ -111,7 +118,7 @@ Ha van olyan üzemelő példánya, amely a klasszikus telepítési modellt haszn
 
 Ha az Azure PowerShell olyan korábbi verziója van telepítve, amely a Szolgáltatáskezelési modult tartalmazza, akkor a következő hibaüzenetet kaphatja:
 
-```
+```Output
 PackageManagement\Install-Package : A command with name 'Get-AzureStorageContainerAcl' is already
 available on this system. This module 'Azure.Storage' may override the existing commands. If you
 still want to install this module 'Azure.Storage', use -AllowClobber parameter.
