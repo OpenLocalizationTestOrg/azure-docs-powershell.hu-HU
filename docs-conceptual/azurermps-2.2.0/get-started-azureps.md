@@ -9,12 +9,12 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 08/31/2017
-ms.openlocfilehash: 87aa26f86d1e6ebcae729375757fc3edc1abb71c
-ms.sourcegitcommit: 79dd3700b5cb4cb90b268778b482082052160093
+ms.date: 11/15/2017
+ms.openlocfilehash: fbd5309167be8cb32aecbfb4661a1789c37d8f2d
+ms.sourcegitcommit: 7a1c08518b180de822c915db99b055b93a1459d7
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getting-started-with-azure-powershell"></a>Ismerkedés az Azure PowerShell-lel
 
@@ -44,7 +44,7 @@ Első lépésként győződjön meg róla, hogy az Azure PowerShell legújabb ve
 
 1. [Telepítse az Azure PowerShellt](install-azurerm-ps.md).
 
-2. A telepítés sikerességének ellenőrzéséhez futtassa a `Get-Module AzureRM` parancsot a parancssorról.
+2. A telepítés sikerességének ellenőrzéséhez futtassa a `Get-Module AzureRM -ListAvailable` parancsot a parancssorról.
 
 ## <a name="log-in-to-azure"></a>Jelentkezzen be az Azure-ba
 
