@@ -9,12 +9,12 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 11/15/2017
-ms.openlocfilehash: fbd5309167be8cb32aecbfb4661a1789c37d8f2d
-ms.sourcegitcommit: 7a1c08518b180de822c915db99b055b93a1459d7
+ms.date: 08/31/2017
+ms.openlocfilehash: 2cd3fc8e955ae826471dceee79d5e6b70070d416
+ms.sourcegitcommit: e6b7e20bbd04eda51416c56b13f867102b602d1a
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="getting-started-with-azure-powershell"></a>Ismerkedés az Azure PowerShell-lel
 
@@ -26,15 +26,15 @@ Első lépésként a legegyszerűbb módszer, ha [elindítja a Cloud Shellt](/az
 
 1. Indítsa el a Cloud Shellt az Azure Portal felső navigációs szakaszából.
 
-   ![Shell ikon](/media/get-started-azureps/shell-icon.png)
+   ![Shell ikon](~/media/get-started-azureps/shell-icon.png)
 
 2. Válassza ki a használni kívánt előfizetést, és hozzon létre egy tárfiókot.
 
-   ![Create a storage account](/media/get-started-azureps/storage-prompt.png)
+   ![Create a storage account](~/media/get-started-azureps/storage-prompt.png)
 
 A tároló létrehozása után a Cloud Shell megnyit egy PowerShell-munkamenetet a böngészőben.
 
-![Cloud Shell a PowerShellhez](/media/get-started-azureps/cloud-powershell.png)
+![Cloud Shell a PowerShellhez](~/media/get-started-azureps/cloud-powershell.png)
 
 Telepítheti az Azure PowerShellt, és helyileg is használhatja PowerShell-munkamenetben.
 
@@ -44,7 +44,7 @@ Első lépésként győződjön meg róla, hogy az Azure PowerShell legújabb ve
 
 1. [Telepítse az Azure PowerShellt](install-azurerm-ps.md).
 
-2. A telepítés sikerességének ellenőrzéséhez futtassa a `Get-Module AzureRM -ListAvailable` parancsot a parancssorról.
+2. A telepítés sikerességének ellenőrzéséhez futtassa a `Get-Module AzureRM` parancsot a parancssorról.
 
 ## <a name="log-in-to-azure"></a>Jelentkezzen be az Azure-ba
 
