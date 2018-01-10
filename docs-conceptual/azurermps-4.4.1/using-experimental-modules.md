@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/05/2017
-ms.openlocfilehash: 7a01957040be7c0498ef4f0e9b8f7297119221a5
-ms.sourcegitcommit: c42c7176276ec4e1cc3360a93e6b15d32083bf9f
+ms.openlocfilehash: c11e4503c07b0a0c4a71021bc511da723098188e
+ms.sourcegitcommit: 42bfd513fe646494d3d9eb0cfc35b049f7e1fbb7
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="using-experimental-azure-powershell-modules"></a>Kísérleti Azure PowerShell-modulok használata
 
@@ -26,12 +26,7 @@ A kísérletezés érdekében új Azure PowerShell-modulokat hozunk létre, amel
 
 Ezek a modulok a meglévő Azure PowerShell-modulok mellett telepíthetők. A parancsmagneveket lerövidítettük, hogy rövidebb neveket kelljen megadni, illetve hogy elkerüljük a névütközést a meglévő, nem kísérleti parancsmagokkal.
 
-A kísérleti modulok az alábbi elnevezési szabályt követik:
-
-- AzureRM.Compute.Experiments
-- AzureRM.Websites.Experiments
-
-Ez a elnevezési szabály az előzetes verziójú modulok elnevezéséhez hasonló: `AzureRM.*.Preview`. Az előzetes verziójú modulok nem azonosak a kísérleti modulokkal. Az előzetes modulok az Azure-szolgáltatások olyan új funkcióit valósítják meg, amelyek csak előzetes ajánlatként érhetők el. Az előzetes verziójú modulok a meglévő Azure PowerShell-modulokat váltják fel, és ugyanazokat a parancsmag- és paraméterneveket használják.
+A kísérleti modulok az alábbi elnevezési szabályt követik: `AzureRM.*.Experiments`. Ez a elnevezési szabály az előzetes verziójú modulok elnevezéséhez hasonló: `AzureRM.*.Preview`. Az előzetes verziójú modulok nem azonosak a kísérleti modulokkal. Az előzetes modulok az Azure-szolgáltatások olyan új funkcióit valósítják meg, amelyek csak előzetes ajánlatként érhetők el. Az előzetes verziójú modulok a meglévő Azure PowerShell-modulokat váltják fel, és ugyanazokat a parancsmag- és paraméterneveket használják.
 
 ## <a name="how-to-install-an-experimental-module"></a>A kísérleti modulok telepítése
 
@@ -42,10 +37,10 @@ Find-Module AzureRM.*.Experiments
 ```
 
 ```Output
-Version    Name                                Repository           Description
--------    ----                                ----------           -----------
-1.0.0      AzureRM.Websites.Experiments        PSGallery            Create and deploy web applications using Azure Ap...
-1.0.25     AzureRM.Compute.Experiments         PSGallery            Azure Compute experiments for VM creation
+Version Name                         Repository Description
+------- ----                         ---------- -----------
+1.0.25  AzureRM.Compute.Experiments  PSGallery  Azure Compute experiments for VM creation
+1.0.0   AzureRM.Websites.Experiments PSGallery  Create and deploy web applications using Azure App Services.
 ```
 
 A kísérleti modulok telepítéséhez használja a következő parancsokat egy emelt szintű PowerShell-munkamenetből:
@@ -74,7 +69,7 @@ A központi fejlesztések a „józan megfontoláson” alapulnak, és az ilyen 
 
 - Rövidebb nevek – Ez a parancsmagok (például: `New-AzureRmVM` => `New-AzVm`) és a paraméterek (például: `-ResourceGroupName` => `-Rg`) nevére is vonatkozik. A „régi” parancsmagokkal való kompatibilitás érdekében aliasok használhatók. Biztosítson _visszafelé kompatibilis_ paraméterkészleteket.
 
-- Intelligens alapértékek – Adja meg a „szükséges” információkat intelligens alapértelmezett értékekkel. Példa:
+- Intelligens alapértékek – Adja meg a „szükséges” információkat intelligens alapértelmezett értékekkel. Például:
   - Erőforráscsoport
   - Hely
   - Függő erőforrások
@@ -101,30 +96,3 @@ A „Webalkalmazás létrehozása” forgatókönyv például egy `-Git` vagy `-
 - Alapértelmezett méretek – Az erőforrások „méretei” megtéveszthetik a felhasználókat, mert sok erőforrás-szolgáltató különböző neveket használ (például „\_DS1\_v2 szabvány” vagy „S1”). A legtöbb felhasználót azonban jobban érdeklik a költségek. Ezért logikus „univerzális” méreteket meghatározni egy díjszabási ütemezés alapján. A felhasználók adott méretet választhatnak vagy hagyhatják, hogy az Azure PowerShell kiválassza a _legjobb lehetőséget_ az erőforrás és a költségvetés alapján.
 
 - Kimeneti formátum – Az Azure PowerShell jelenleg `PSObject` elemeket ad vissza, és kevés konzolkimenet van. Lehetséges, hogy az Azure PowerShellnek információt kell megjelenítenie a felhasználónak a használt „intelligens alapértékekről”.
-
-## <a name="try-using-the-experiments"></a>A kísérletek kipróbálása
-
-### <a name="install"></a>Telepítés
-
-```powershell
-Install-Module AzureRM.Compute.Experiments
-```
-
-### <a name="create-a-vm"></a>Virtuális gép létrehozása
-
-```powershell
-$job = New-AzVm -Name MyVm -AsJob
-Receive-Job $job
-```
-
-### <a name="send-us-feedback"></a>Visszajelzés küldése
-
-```powershell
-Send-Feedback
-```
-
-### <a name="uninstall-the-experimental-modules"></a>A kísérleti modulok eltávolítása
-
-```powershell
-Uninstall-Module AzureRM.Compute.Experiments
-```
