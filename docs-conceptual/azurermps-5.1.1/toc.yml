@@ -37,6 +37,8 @@
       items:
         - name: Kísérleti modulok használata
           href: using-experimental-modules.md
+        - name: Parancsmagok párhuzamos futtatása PowerShell-feladatok használatával
+          href: using-psjobs.md
     - name: Kibocsátási megjegyzések
       href: release-notes-azureps.md
 - name: Mintaszkriptek
