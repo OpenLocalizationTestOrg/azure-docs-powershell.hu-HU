@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.openlocfilehash: 2b23af1ef84b7c91abdcbe0738b29b068f82fd32
-ms.sourcegitcommit: b256bf48e15ee98865de0fae50e7b81878b03a54
+ms.openlocfilehash: 916cf8590de89762bade4f01ce5a502383d51796
+ms.sourcegitcommit: c42c7176276ec4e1cc3360a93e6b15d32083bf9f
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="formatting-query-results"></a>Lekérdezési eredmények formázása
 
@@ -58,7 +58,7 @@ MyWin2016VM   MYWESTEURG        westeurope
 Az adatokat igény szerint lista formájában is megjelenítheti. Az alábbi példa ezt mutatja be a `Format-List` parancsmag használatával.
 
 ```powershell
-Get-AzureVM | Format-List Name,VmId,Location,ResourceGroupName
+Get-AzureRmVM | Format-List Name,VmId,Location,ResourceGroupName
 ```
 
 ```
