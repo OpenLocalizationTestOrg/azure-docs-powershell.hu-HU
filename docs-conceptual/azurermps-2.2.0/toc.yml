@@ -29,6 +29,9 @@
           href: 'https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-powershell-sas-token'
     - name: Kibocsátási megjegyzések
       href: release-notes-azureps.md
+      items:
+        - name: Az Azure PowerShell 2.x használhatatlanná tévő változásai
+          href: migration-guide.2.0.0.md
 - name: Mintaszkriptek
   items:
     - name: Linux rendszerű virtuális gépek
