@@ -37,10 +37,11 @@
       items:
         - name: Kísérleti modulok használata
           href: using-experimental-modules.md
-        - name: Parancsmagok párhuzamos futtatása PowerShell-feladatok használatával
-          href: using-psjobs.md
     - name: Kibocsátási megjegyzések
       href: release-notes-azureps.md
+      items:
+        - name: Az Azure PowerShell 5.x használhatatlanná tévő változásai
+          href: migration-guide.5.0.0.md
 - name: Mintaszkriptek
   items:
     - name: Linux rendszerű virtuális gépek
