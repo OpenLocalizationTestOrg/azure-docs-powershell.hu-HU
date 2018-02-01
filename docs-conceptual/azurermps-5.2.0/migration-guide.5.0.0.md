@@ -623,8 +623,8 @@ Set-AzureRmADUser [other required parameters] -Password $SecureStringVariable
 
 ### <a name="type-namespaceattributes"></a>**NamespaceAttributes típus**
 - Az alábbi tulajdonságok lettek eltávolítva:
-    - Enabled
-    - Status
+    - Engedélyezve
+    - status
    
 ```powershell
 # Old
@@ -661,7 +661,7 @@ $queue = Get-AzureRmServiceBusQueue <parameters>
    
 ### <a name="type-topicattribute"></a>**TopicAttribute típus**
 - Az alábbi tulajdonságok lettek megjelölve elavultként:
-    - Location
+    - Hely
     - IsExpress
     - IsAnonymousAccessible
     - FilteringMessagesBeforePublishing
@@ -689,7 +689,7 @@ $topic = Get-AzureRmServiceBusTopic <parameters>
     - DeadLetteringOnFilterEvaluationExceptions
     - EntityAvailabilityStatus
     - IsReadOnly
-    - Location
+    - Hely
    
 ```powershell
 # Old
