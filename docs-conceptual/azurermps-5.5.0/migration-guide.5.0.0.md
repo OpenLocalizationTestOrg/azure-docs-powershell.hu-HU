@@ -388,7 +388,7 @@ $consumergroup = Get-AzureRmEventHubConsumerGroup <parameters>
 
 ### <a name="add-azurermlogalertrule"></a>**Add-AzureRMLogAlertRule**
 - Az **Add-AzureRMLogAlertRule** parancsmag elavult.
-- A parancsmag használatának október 1-jétől kezdve nem lesz hatása, mivel a funkció tevékenyégnapló-riasztásokra vált át. További tájékoztatást a https://aka.ms/migratemealerts webhelyen talál.
+- A parancsmag használatának október 1-jétől kezdve nem lesz hatása, mivel a funkció tevékenyégnapló-riasztásokra vált át. További információ: https://aka.ms/migratemealerts.
 
 ### <a name="get-azurermusage"></a>**Get-AzureRMUsage**
 - A **Get-AzureRMUsage** parancsmag elavult.
