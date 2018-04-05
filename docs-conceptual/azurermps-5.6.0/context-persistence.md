@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
-ms.openlocfilehash: 8ef20796b64b16c78a653e293a57d5e752d89710
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.openlocfilehash: 4b2b3b690a8c5d6951b24d49091154c6fb479fe3
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="persisting-user-logins-across-powershell-sessions"></a>Felhasználói bejelentkezések megőrzése a PowerShell-munkamenetek között
 
@@ -73,7 +73,7 @@ Ha tájékozódni szeretne egy háttérfeladat kimeneteléről, a `Get-Job` para
 
 ## <a name="creating-selecting-renaming-and-removing-contexts"></a>Környezetek létrehozása, kiválasztása, átnevezése és eltávolítása
 
-Környezetek létrehozásához be kell jelentkeznie az Azure-ba. Az `Add-AzureRmAccount` parancsmaggal (vagy az aliasával, a `Login-AzureRmAccount` parancsmaggal) állítható be a későbbiekben futtatott Azure PowerShell-parancsmagok által használt alapértelmezett környezet, valamint lehetővé teszi a bejelentkezési hitelesítő adatai számára engedélyezett bérlők vagy előfizetések elérését.
+Környezetek létrehozásához be kell jelentkeznie az Azure-ba. Az `Connect-AzureRmAccount` parancsmaggal (vagy az aliasával, a `Login-AzureRmAccount` parancsmaggal) állítható be a későbbiekben futtatott Azure PowerShell-parancsmagok által használt alapértelmezett környezet, valamint lehetővé teszi a bejelentkezési hitelesítő adatai számára engedélyezett bérlők vagy előfizetések elérését.
 
 A bejelentkezés után új környezet hozzáadásához használja a `Set-AzureRmContext` parancsmagot (vagy az aliasát, a `Select-AzureRmSubscription` parancsmagot).
 
